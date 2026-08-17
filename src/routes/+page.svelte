@@ -152,7 +152,7 @@
 </script>
 
 <svelte:head>
-	<title>{current ? `${current.score} · ` : ''}Skeeter</title>
+	<title>{current ? `${current.score} · ` : ''}Skeetr</title>
 </svelte:head>
 
 <PlaceBar name={place?.name ?? 'Finding you…'} detail={updated ? `Updated ${updated}` : ''} {busy} />

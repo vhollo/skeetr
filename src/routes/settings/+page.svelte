@@ -56,10 +56,10 @@
 	let quietOn = $derived(prefs.current.quietHours !== null);
 </script>
 
-<svelte:head><title>Settings · Skeeter</title></svelte:head>
+<svelte:head><title>Settings · Skeetr</title></svelte:head>
 
 <header class="pt-6 pb-5">
-	<p class="eyebrow">Skeeter</p>
+	<p class="eyebrow">Skeetr</p>
 	<h1 class="display mt-0.5 mb-0 text-3xl">Settings</h1>
 </header>
 

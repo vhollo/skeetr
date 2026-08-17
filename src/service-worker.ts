@@ -5,7 +5,7 @@ import { build, files, version } from '$service-worker';
 
 const sw = self as unknown as ServiceWorkerGlobalScope;
 
-const CACHE = `skeeter-${version}`;
+const CACHE = `skeetr-${version}`;
 const PRECACHE = [...build, ...files];
 
 sw.addEventListener('install', (event) => {
@@ -86,14 +86,14 @@ sw.addEventListener('notificationclick', (event) => {
  * bad. Everything precise relies on the page being open or on the calendar feed.
  */
 sw.addEventListener('periodicsync', ((event: ExtendableEvent & { tag: string }) => {
-	if (event.tag !== 'skeeter-risk-check') return;
+	if (event.tag !== 'skeetr-risk-check') return;
 	event.waitUntil(checkAhead());
 }) as EventListener);
 
 async function checkAhead() {
 	try {
 		const cache = await caches.open(CACHE);
-		const stored = await cache.match('/__skeeter_place');
+		const stored = await cache.match('/__skeetr_place');
 		if (!stored) return;
 
 		const place = (await stored.json()) as { lat: number; lon: number; name: string };
@@ -112,8 +112,8 @@ async function checkAhead() {
 		if (!biting) return;
 
 		await sw.registration.showNotification('Mosquitoes are likely today', {
-			body: `Open Skeeter for tonight's window at ${place.name}.`,
-			tag: 'skeeter-daily',
+			body: `Open Skeetr for tonight's window at ${place.name}.`,
+			tag: 'skeetr-daily',
 			icon: '/icon-192.png',
 			data: { url: '/' }
 		});

@@ -1,6 +1,6 @@
 {
-	"name": "Skeeter — mosquito bite forecast",
-	"short_name": "Skeeter",
+	"name": "Skeetr — mosquito bite forecast",
+	"short_name": "Skeetr",
 	"description": "Hourly mosquito bite-risk forecast and a timed plan for when to spray or switch on a vaporiser.",
 	"start_url": "/",
 	"scope": "/",

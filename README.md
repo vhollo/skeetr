@@ -1,4 +1,4 @@
-# Skeeter
+# Skeetr
 
 An hourly mosquito bite-risk forecast, and a timed plan for what to do about it.
 
@@ -9,7 +9,7 @@ evening: **do I need to spray, and when?**
 ## The model
 
 Bite risk is the product of two things that behave on completely different
-timescales, so Skeeter computes them separately.
+timescales, so Skeetr computes them separately.
 
 **How many mosquitoes are around** — days to weeks. Rain does not create
 mosquitoes, it floods eggs that were already laid. Each rain event seeds a cohort

@@ -21,7 +21,7 @@ const DEFAULTS: Prefs = {
 	units: 'metric'
 };
 
-const store = persisted<Prefs>('skeeter:prefs', DEFAULTS);
+const store = persisted<Prefs>('skeetr:prefs', DEFAULTS);
 
 export const prefs = {
 	get current() {

@@ -30,7 +30,7 @@ export async function requestBackgroundChecks(
 		});
 		if (status.state !== 'granted') return false;
 
-		await registration.periodicSync.register('skeeter-risk-check', {
+		await registration.periodicSync.register('skeetr-risk-check', {
 			// The floor the browser enforces is around 12 hours regardless.
 			minInterval: 12 * 60 * 60 * 1000
 		});
@@ -52,11 +52,11 @@ export async function publishPlaceToWorker(place: {
 	if (!browser || !('caches' in window)) return;
 	try {
 		const keys = await caches.keys();
-		const key = keys.find((k) => k.startsWith('skeeter-'));
+		const key = keys.find((k) => k.startsWith('skeetr-'));
 		if (!key) return;
 		const cache = await caches.open(key);
 		await cache.put(
-			'/__skeeter_place',
+			'/__skeetr_place',
 			new Response(
 				JSON.stringify({ lat: place.latitude, lon: place.longitude, name: place.name }),
 				{ headers: { 'content-type': 'application/json' } }

@@ -150,10 +150,10 @@
 	let maxTrip = $derived(wallClock(Date.now() + 6.5 * 86_400_000, tripZone));
 </script>
 
-<svelte:head><title>Places · Skeeter</title></svelte:head>
+<svelte:head><title>Places · Skeetr</title></svelte:head>
 
 <header class="pt-6 pb-5">
-	<p class="eyebrow">Skeeter</p>
+	<p class="eyebrow">Skeetr</p>
 	<h1 class="display mt-0.5 mb-0 text-3xl">Places</h1>
 </header>
 

@@ -27,7 +27,7 @@ export function buildIcs(options: IcsOptions): string {
 	const lines: string[] = [
 		'BEGIN:VCALENDAR',
 		'VERSION:2.0',
-		'PRODID:-//Skeeter//Mosquito bite forecast//EN',
+		'PRODID:-//Skeetr//Mosquito bite forecast//EN',
 		'CALSCALE:GREGORIAN',
 		'METHOD:PUBLISH',
 		`X-WR-CALNAME:${escapeText(`Mosquito risk — ${placeName}`)}`,
@@ -61,7 +61,7 @@ export function buildIcs(options: IcsOptions): string {
 
 		lines.push(
 			'BEGIN:VEVENT',
-			`UID:skeeter-${window.start}@skeeter.app`,
+			`UID:skeetr-${window.start}@skeetr.app`,
 			`DTSTAMP:${formatUtc(Date.now())}`,
 			`DTSTART:${formatUtc(window.start)}`,
 			`DTEND:${formatUtc(window.end)}`,

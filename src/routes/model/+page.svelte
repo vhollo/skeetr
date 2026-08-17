@@ -2,10 +2,10 @@
 	import { ACTIVITY, ADULT, BREEDING, DEGREE_DAY } from '$lib/model/params';
 </script>
 
-<svelte:head><title>How it works · Skeeter</title></svelte:head>
+<svelte:head><title>How it works · Skeetr</title></svelte:head>
 
 <header class="pt-6 pb-5">
-	<p class="eyebrow">Skeeter</p>
+	<p class="eyebrow">Skeetr</p>
 	<h1 class="display mt-0.5 mb-0 text-3xl">How it works</h1>
 </header>
 
@@ -13,7 +13,7 @@
 	<section>
 		<p class="text-base text-(--color-bone)">
 			Two things decide whether you get bitten: how many mosquitoes are around, and whether they are
-			flying right now. Skeeter works them out separately and multiplies them.
+			flying right now. Skeetr works them out separately and multiplies them.
 		</p>
 	</section>
 
@@ -21,7 +21,7 @@
 		<p class="eyebrow">How many are around</p>
 		<p class="mt-2">
 			Rain does not create mosquitoes — it floods eggs that were already laid. That batch needs
-			warmth before it can fly, so Skeeter counts <em>degree-days</em>: every hour above
+			warmth before it can fly, so Skeetr counts <em>degree-days</em>: every hour above
 			{DEGREE_DAY.baseTempC}°C adds to a running total, and the batch emerges once it reaches the
 			threshold for the species.
 		</p>
@@ -50,7 +50,7 @@
 			<li>
 				<strong class="text-(--color-bone)">Wind.</strong> They are weak fliers, and stop flying
 				around {ACTIVITY.wind.groundedKmh} km/h. Forecasts report wind high up in the open, so
-				Skeeter reads it down to what is felt at ankle height among hedges and furniture —
+				Skeetr reads it down to what is felt at ankle height among hedges and furniture —
 				otherwise every breezy evening would wrongly show as no risk.
 			</li>
 			<li>

@@ -9,7 +9,7 @@ import type { Alert } from '$lib/model/schedule';
  * alive. That limitation is surfaced honestly in Settings rather than hidden.
  */
 
-const FIRED_KEY = 'skeeter:fired';
+const FIRED_KEY = 'skeetr:fired';
 /** setTimeout is unreliable beyond this; longer-range alerts are re-armed on load. */
 const MAX_DELAY_MS = 30 * 60 * 1000;
 
@@ -92,7 +92,7 @@ export async function sendTestNotification(): Promise<boolean> {
 		id: `test-${Date.now()}`,
 		fireAt: Date.now(),
 		exposureAt: Date.now(),
-		title: 'Skeeter notifications are on',
+		title: 'Skeetr notifications are on',
 		body: 'This is what a dusk warning will look like.',
 		score: 0,
 		band: 2,

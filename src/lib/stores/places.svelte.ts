@@ -20,7 +20,7 @@ interface PlacesState {
 
 const DEFAULTS: PlacesState = { saved: [], trips: [], activeId: 'current' };
 
-const store = persisted<PlacesState>('skeeter:places', DEFAULTS);
+const store = persisted<PlacesState>('skeetr:places', DEFAULTS);
 
 export const places = {
 	get saved() {
