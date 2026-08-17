@@ -5,9 +5,9 @@
 [[headers]]
 	for = "/service-worker.js"
 	[headers.values]
-		Cache-Control = "public, max-age=0, must-revalidate"
+		cache-control = "public, max-age=0, must-revalidate"
 
 [[headers]]
 	for = "/manifest.webmanifest"
 	[headers.values]
-		Cache-Control = "public, max-age=3600"
+		cache-control = "public, max-age=3600"
