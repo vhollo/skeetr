@@ -1,0 +1,4 @@
+// Everything runs against the user's own device state and geolocation, so there
+// is nothing useful to render on the server.
+export const ssr = false;
+export const prerender = false;

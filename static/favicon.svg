@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Skeeter">
+	<rect width="64" height="64" rx="14" fill="#0b1220" />
+	<g stroke="#cf2d63" stroke-width="3" stroke-linecap="round" fill="none">
+		<path d="M32 20v26" />
+		<path d="M32 46l-6 6M32 46l6 6" />
+		<path d="M32 24l-9-8M32 24l9-8" />
+	</g>
+	<g fill="#6b7a95" opacity="0.85">
+		<ellipse cx="20" cy="30" rx="11" ry="5" transform="rotate(-22 20 30)" />
+		<ellipse cx="44" cy="30" rx="11" ry="5" transform="rotate(22 44 30)" />
+	</g>
+	<circle cx="32" cy="18" r="4" fill="#cf2d63" />
+</svg>

@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+@import '@fontsource-variable/ibm-plex-sans';
+@import '@fontsource/ibm-plex-sans-condensed/600.css';
+@import '@fontsource/ibm-plex-sans-condensed/700.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+
+/*
+ * The palette is the sky at the hours that matter. Mosquito risk is driven by
+ * the sun, so the app is coloured by dusk: indigo night, bruised violet
+ * twilight, low amber sun, washed steel daylight. The one hot colour — welt
+ * magenta — is reserved exclusively for risk, so it always means one thing.
+ */
+@theme {
+	--color-night: #0b1026;
+	--color-night-deep: #070b1b;
+	--color-slate-ink: #141c3a;
+	--color-slate-line: #253059;
+	--color-twilight: #3b2d5e;
+	--color-golden: #8a5734;
+	--color-daylight: #24435c;
+
+	--color-bone: #ece7dc;
+	--color-bone-dim: #9aa2b8;
+	--color-bone-faint: #5f6885;
+
+	--color-welt: #e0396b;
+	--color-welt-soft: #f0789c;
+
+	/* Risk bands. Not a traffic light: a single hue ramping up in heat, so the
+	   difference between bands reads as intensity rather than as status. */
+	--color-band-0: #4a7f8c;
+	--color-band-1: #8f9a4e;
+	--color-band-2: #c9903a;
+	--color-band-3: #dd5f43;
+	--color-band-4: #e0396b;
+
+	--font-sans: 'IBM Plex Sans Variable', ui-sans-serif, system-ui, sans-serif;
+	--font-display: 'IBM Plex Sans Condensed', 'IBM Plex Sans Variable', system-ui, sans-serif;
+	--font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+:root {
+	color-scheme: dark;
+}
+
+html {
+	background: var(--color-night-deep);
+}
+
+body {
+	background: var(--color-night-deep);
+	color: var(--color-bone);
+	font-family: var(--font-sans);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+/* Bulletin-board headings: condensed, tight, uppercase with wide tracking. */
+.eyebrow {
+	font-family: var(--font-display);
+	font-weight: 600;
+	font-size: 0.6875rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--color-bone-faint);
+}
+
+.display {
+	font-family: var(--font-display);
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	line-height: 0.92;
+}
+
+/* Instrument readouts. Tabular figures stop numbers jittering as they tick. */
+.readout {
+	font-family: var(--font-mono);
+	font-variant-numeric: tabular-nums;
+	font-feature-settings: 'zero' 1;
+}
+
+.rule {
+	border-color: var(--color-slate-line);
+}
+
+.panel {
+	background: color-mix(in oklab, var(--color-slate-ink) 60%, transparent);
+	border: 1px solid var(--color-slate-line);
+}
+
+/* Keyboard focus must stay obvious against a dark ground. */
+:focus-visible {
+	outline: 2px solid var(--color-welt-soft);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
