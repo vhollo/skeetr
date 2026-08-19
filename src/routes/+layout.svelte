@@ -23,16 +23,15 @@
 	}
 </script>
 
-<div class="mx-auto flex min-h-dvh max-w-2xl flex-col px-5 pb-24">
+<div class="safe-top safe-x pb-nav mx-auto flex min-h-dvh max-w-2xl flex-col">
 	{@render children()}
 </div>
 
 <nav
-	class="fixed inset-x-0 bottom-0 z-20 border-t border-(--color-slate-line) bg-(--color-night-deep)/95 backdrop-blur"
-	style="padding-bottom: env(safe-area-inset-bottom)"
+	class="safe-bottom fixed inset-x-0 bottom-0 z-20 border-t border-(--color-slate-line) bg-(--color-night-deep)/95 backdrop-blur"
 	aria-label="Sections"
 >
-	<ul class="mx-auto flex max-w-2xl list-none justify-around p-0">
+	<ul class="safe-x mx-auto flex max-w-2xl list-none justify-around py-0">
 		{#each tabs as tab (tab.href)}
 			<li class="flex-1">
 				<a
